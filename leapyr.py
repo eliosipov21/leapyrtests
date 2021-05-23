@@ -1,7 +1,4 @@
-'''
-How to run the file: 
-simply run the command: python ilya_osipov_hw1.py in the command line (or python3 ilya_osipov_hw1.py)
-'''
+import pytest 
 
 def leapyear(val):
     try: 
@@ -18,3 +15,12 @@ def leapyear(val):
             return True
     else: 
         return False 
+
+
+def test_1():
+    assert leapyear(2018) == False 
+def test_2():
+    assert leapyear(2020) == True
+def test_3():
+    assert leapyear(0) == False 
+
